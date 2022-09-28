@@ -1,25 +1,27 @@
-<p>{{titulo}}</p>
+<mat-card-title>Cadastro de Usuários</mat-card-title>
 
-<mat-form-field appearance="fill">
+<mat-card class="color">
+<mat-form-field appearance="fill" class="mat-form-principal">
   <mat-label>Nome</mat-label>
   <input matInput [(ngModel)]="usuario.nome" placeholder="digite o nome">
 </mat-form-field>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="fill" class="mat-form-principal">
   <mat-label>CPF</mat-label>
   <input matInput [(ngModel)]="usuario.cpf" placeholder="digite o cpf">
 </mat-form-field>
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="fill" class="mat-form-principal">
   <mat-label>Idade</mat-label>
   <input matInput [(ngModel)]="usuario.idade" placeholder="digite a idade">
 </mat-form-field>
 
-<button mat-raised-button mat-icon-button color="primary" (click)="inserirUsuario()">
+<mat-card-footer class="center"><button mat-raised-button mat-icon-button color="primary" (click)="inserirUsuario()">
   <mat-icon>add</mat-icon>
 </button>
-
+</mat-card-footer>
 <br>
+</mat-card>
 
 <mat-card *ngFor="let usuario of usuarios" class="mat-card-simples">
   <mat-card-header>
@@ -30,3 +32,4 @@
     Blablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla bla
   </mat-card-content>
 </mat-card>
+
